@@ -1,11 +1,22 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
 html,
-body {
+body{
+  background-color: #FAFAFA;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-
+body.dark{
+  background-color: #FAFAFA;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +24,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.card {
+  background-color: theme('colors.white');
+  border-radius: theme('borderRadius.lg');
+  box-shadow: theme('boxShadow.xl');
+}
+
+.card-body{
+  padding: theme('spacing.6');
 }
