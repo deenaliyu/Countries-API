@@ -56,7 +56,7 @@ const Main = ({ countries }) => {
           }}>
             <option className='py-1' value="All">Filter by Region</option>
             <option className='py-1' value="Africa">Africa</option>
-            <option className='py-1' value="America">America</option>
+            <option className='py-1' value="Americas">America</option>
             <option className='py-1' value="Asia">Asia</option>
             <option className='py-1' value="Europe">Europe</option>
             <option className='py-1' value="Oceania">Oceania</option>
@@ -71,7 +71,7 @@ const Main = ({ countries }) => {
             <p>Loading countries</p>
           ) : (
             search(countries).map((country, i) => (
-              <Cards key={i} country={country} handleNextClick={() => { router.push({ pathname: "/countries", query: { id: i } }) }} />
+              <Cards key={i} country={country} handleNextClick={() => { router.push({ pathname: "/countries", query: { name: country.name } }) }} />
             ))
           )
           }
